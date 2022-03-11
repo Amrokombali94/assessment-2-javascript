@@ -20,6 +20,15 @@
 */
 
 //CODE HERE
+class Employee {
+    constructor(name, shift){
+        this.name = name;
+        this.shift = shift;
+    }
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shift}`)
+    }
+}
 
 
 
@@ -35,12 +44,14 @@
 
 //CODE HERE
 
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
+empOne.getSchedule();
 
 
 /*
@@ -56,7 +67,9 @@
 */
 
 //CODE HERE
+let empTwo = {...empOne};
 
+empTwo.name = 'Nick'
 
 
 //////////////////PROBLEM 2////////////////////
@@ -84,6 +97,18 @@
 
 //CODE HERE
 
+class Manager extends Employee {
+    constructor(name, shift, employees){
+        super(name, shift)
+        this.employees = employees;
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees.length}`)
+    }
+    addEmployee(emp){
+
+    }
+}
 
 
 /*
@@ -98,7 +123,7 @@
 */
 
 //CODE HERE
-
+let manager = new Manager('Winston', 'weekday mornings, weekday afternoons', ['Cece', 'Schmidet'])
 
 /*
     Call the `getEmployees` method on the
@@ -107,6 +132,7 @@
 
 //CODE HERE
 
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 

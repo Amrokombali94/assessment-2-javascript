@@ -89,7 +89,9 @@ const calcFinalPrice = (cartTotal, couponValue, tax) =>{
 /*
     TEXT ANSWER HERE
     The customer object for cart page will have four properties product, quantity, price and discount.
-    The product property will show the product name and this will string data type
+    The product property will show the product name and this will be string data type.
+    The quantity will show the amount of the product that the customer wants to purchase and this will be number data type.
+    The price and the discount will be number data type.
 
 */
 
@@ -99,3 +101,17 @@ const calcFinalPrice = (cartTotal, couponValue, tax) =>{
 */
 
 //CODE HERE
+
+class Customer {
+    constructor(product, quantity, price, discount){
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
+        this.discount = discount;
+    }
+     
+}
+
+const customer1 = new Customer('tometo', 20, 2, 0.05)
+
+console.log(customer1)

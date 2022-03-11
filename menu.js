@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+let pizza = {
+    name : 'New york Pizza',
+    price : 12,
+    category: 'Lunch',
+    popularity: 8.4,
+    rating: 4.3,
+    tags: ['gluten-free', 'kids']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +51,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +62,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +72,9 @@
 */
 
 //CODE HERE
+let {price: price} = pizza
 
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +84,9 @@
 */
 
 //CODE HERE
+let{category: category} = pizza
 
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +101,49 @@
 */
 
 //CODE HERE
+let foodArr =[
+    {   name: 'cheese burger',
+        price : 9,
+        category: 'Lunch',
+        popularity: 7.8,
+        rating: 4.2,
+        tags: ['High carb', 'adult'] 
 
+    },
+    {   name: 'chicken nuggets',
+        price : 7,
+        category: 'Breakfast',
+        popularity: 8.2,
+        rating: 4.00,
+        tags: ['Low calories', 'kid'] 
+
+    },
+    {   name: 'chicken zinger',
+        price : 10.7,
+        category: 'Breakfast',
+        popularity: 9.7,
+        rating: 8.0,
+        tags: ['less fats', 'too spicy'] 
+
+    },
+    {   name: 'pan cake',
+        price : 6.7,
+        category: 'dessert',
+        popularity: 8.6,
+        rating: 7.7,
+        tags: ['High carb', 'whole wheat'] 
+
+    },
+    {   name: 'coffee',
+        price : 3.3,
+        category: 'drink',
+        popularity: 8.9,
+        rating: 8.0,
+        tags: ['high caffiene', 'American coffee'] 
+
+    }
+
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +160,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+ const filteredFood = foodArr.filter(item => item.tags.includes['American coffee'])
+
+ console.log(filteredFood)
 
 
 
